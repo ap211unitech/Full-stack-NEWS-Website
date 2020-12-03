@@ -5,11 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News api made with node.js and express</title>
+    <link rel="stylesheet" href="/style/navbar.css">
     <link rel="stylesheet" href="<%- style %> ">
 </head>
 
 <body>
-    <%- body %> 
+    <!----------------------------------- Navbar ----------------------------------->
+    <nav id="navbar">
+        <div class="logo">
+            <a href="/">
+                <img src="/img/internet.png" alt="Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Search</a>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--------------------------------------- Body --------------------------------------->
+    <%- body %>
+
+    <!-------------------------------------- Footer -------------------------------------->
 </body>
 
 </html>

@@ -1,4 +1,12 @@
-<% style=null %> 
-<!-- <h2>Hello world</h2>
-<script src="/index.js"></script> -->
-<%- name %> 
+<% style = "/style/news.css" %>
+<div id="headlines">
+    <div class="all-cards-headlines">
+        <%  news.articles.forEach(data => { %>
+        <div class="card-headline">
+            <img src="<%- data.urlToImage %> ">
+            <h3> <%- data.title %> </h3>
+            <p><i> <%- data.author %> </i></p>
+        </div>
+        <% }) %>
+    </div>
+</div>

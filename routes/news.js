@@ -3,30 +3,15 @@ const router = express.Router();
 const { default: Axios } = require("axios");
 
 router.get("/", (req, res) => {
-    res.render('new.ejs');
-})
-
-router.post("/", (req, res) => {
-    // await fetch("https://jsonplaceholder.typicode.com/posts")
-    //     .then(response => {
-    //     response.json()
-    //     console.log(response)
-    //     })
-    //     .then(data => {
-    //         console.log(data)
-    //         res.json(data)
-    //     })
-    //     .catch(err => {
-    //         console.log(err)
-    //     })
-    Axios.get("https://jsonplaceholder.typicode.com/posts")
-        .then(data => {
-            res.json(data.data)
+    Axios.get("http://newsapi.org/v2/top-headlines?country=in&apiKey=5a9e99af783440558fbe459cad866e31")
+        .then(news => {
+            res.render('news.ejs', { news: news.data });
         })
         .catch(err => {
-            console.log(err)
+            res.render('news.ejs', { err });
         })
 })
+
 
 
 module.exports = router;

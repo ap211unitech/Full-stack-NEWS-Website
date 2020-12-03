@@ -1,0 +1,30 @@
+#headlines {
+    margin: 40px;
+    border: 2px solid black;
+}
+
+.all-cards-headlines {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 98%;
+}
+
+.all-cards-headlines .card-headline {
+    border: 1px solid red;
+    padding: 20px;
+    margin: 30px;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.all-cards-headlines .card-headline img {
+    width: 380px;
+    height: 380px;
+}
