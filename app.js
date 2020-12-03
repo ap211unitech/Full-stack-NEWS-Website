@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 
 // JSON Data
 app.use(bodypasrser.json());
-app.use(bodypasrser.urlencoded({ extended: true }));
+app.use(bodypasrser.urlencoded({ extended: false }));
 
 //Setting views directory
 app.set("views", path.join(__dirname, '/views'));
