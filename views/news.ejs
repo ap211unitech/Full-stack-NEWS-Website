@@ -2,11 +2,24 @@
 <div id="headlines">
     <div class="all-cards-headlines">
         <%  news.articles.forEach(data => { %>
+        <% if(data.urlToImage && data.title && data.author) { %>
         <div class="card-headline">
-            <img src="<%- data.urlToImage %> ">
-            <h3> <%- data.title %> </h3>
-            <p><i> <%- data.author %> </i></p>
+            <div class="img">
+                <img src="<%- data.urlToImage %>">
+            </div>
+            <div class="content">
+                <% const SendingData = data %> 
+                <h3 onclick="getSingleNews('<%= SendingData %>')"> <%- data.title %> </h3>
+                <p><i> <%- data.author %> </i></p>
+            </div>
         </div>
+        <% } %>
         <% }) %>
     </div>
 </div>
+
+<div class="single-news">
+
+</div>
+
+<script src="/js/news.js"></script>
